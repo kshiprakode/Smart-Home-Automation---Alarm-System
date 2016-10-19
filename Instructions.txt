@@ -1,0 +1,30 @@
+Compiling the files : 
+Go to the folder having the C files. Execute the following commands to compile the files or run the compile.sh script
+gcc gateway.c -o gateway -lpthread
+gcc motion.c -o motion -lpthread
+gcc door.c -o door -lpthread
+gcc keychain.c -o keychain -lpthread
+gcc security.c -o security -lpthread
+gcc database.c -o database -lpthread
+
+Running the output files : 
+
+Running the Gateway : -> ./a.out <Configuration File> <Output File>
+./gateway SampleConfigurationFiles/GatewayConfig.txt Output/GatewayOutputFile.txt 
+
+Running the Database : -> ./a.out <Configuration File> <Output File>
+./database SampleConfigurationFiles/BackEndConfigurationFile.txt Output/PersistentStorage.txt 
+
+Running the Security System  : -> ./a.out <Configuration File> <Output File>
+./security SampleConfigurationFiles/SecurityConfigurationFile.txt Output/SecurityOutputFile.txt
+
+Running the Motion Sensor : -> ./a.out <Configuration File> <State File> <Output File>
+./motion SampleConfigurationFiles/MotionConfigurationFile.txt SampleConfigurationFiles/MotionStateFile.txt Output/MotionOutputFile.txt 
+
+Running the Door Sensor: -> ./a.out <Configuration File> <State File> <Output File>
+./door SampleConfigurationFiles/DoorConfigurationFile.txt SampleConfigurationFiles/DoorStateFile.txt Output/DoorOutputFile.txt
+
+Running the Keychain Sensor: -> ./a.out <Configuration File> <State File> <Output File>
+./keychain SampleConfigurationFiles/KeyChainConfigurationFile.txt SampleConfigurationFiles/KeyChainStateFile.txt Output/KeychainOutputFile.txt 
+
+All the output files will be generates in the output folder. 
